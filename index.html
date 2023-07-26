@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="robots" content="noimageindex, nofollow, nosnippet">
+  <link rel="modulepreload" href="./app.js">
+  <title>Buildless Preact Starter</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body class="site">
+  <header>
+    <a class="header-logo" href="#" rel="noopener" target="_blank">
+      <img class="block" src="logo.svg" width="150">
+    </a>
+  </header>
+  <main class="site-content mx-auto">
+    <section id="app-container"></section>
+  </main>
+  <footer class="text-center text-sm mx-auto">
+    <p>Built using Preact.</p>
+    <div class="footer-row mobile-column">
+      <a class="footer-link" href="#">Read the Article</a>
+      <a class="footer-link" href="#" target="_blank" rel="noopener">Code@GitHub</a>
+    </div>
+  </footer>
+  <script type="module">
+    import App from './app.js'
+
+    window.addEventListener('load', () => {
+      App()
+    })
+  </script>
+</body>
+
+</html>
