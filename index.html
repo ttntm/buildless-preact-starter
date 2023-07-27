@@ -4,6 +4,9 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="robots" content="noimageindex, nofollow, nosnippet">
+  <link rel="modulepreload" href="https://esm.sh/preact@10.4.7">
+  <link rel="modulepreload" href="https://esm.sh/preact@10.4.7">
+  <link rel="modulepreload" href="https://esm.sh/htm@3.0.4">
   <link rel="modulepreload" href="./app.js">
   <title>Buildless Preact Starter</title>
   <link rel="stylesheet" type="text/css" href="./styles.css">
@@ -29,7 +32,11 @@
     import App from './app.js'
 
     window.addEventListener('load', () => {
-      App()
+      const config = {
+        context: 'Context from index.html'
+      }
+
+      App(config)
     })
   </script>
 </body>

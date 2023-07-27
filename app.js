@@ -6,11 +6,20 @@ import { App_Static } from './config.js'
 
 const html = htm.bind(h)
 
+// Initialization call for components defined in `components.js`
 const {
   Counter
 } = Components()
 
-export default function App() {
+// A local functional component definition
+const Heading = ({ textContent }) => {
+  return html`<h1>${textContent}</h1>`
+}
+
+export default function App(config) {
+  // Config passed from `index.html`
+  const { context } = config
+
   const Main = () => {
     const [firstTimeRender, setFirstTimeRender] = useState(true)
     
@@ -18,7 +27,7 @@ export default function App() {
       if (firstTimeRender) {
         // Code that should only run on the first render of this component
 
-        console.info('Marker: first time render')
+        console.info('Marker: first time render', context)
 
         setFirstTimeRender(false)
       }
@@ -26,7 +35,7 @@ export default function App() {
 
     return html`
       <img class="block mx-auto my-1" src="${App_Static.image}" width="350" />
-      <h1>${App_Static.heading}</h1>
+      <${Heading} textContent="${App_Static.heading}" />
       <p>${App_Static.intro}</p>
       <${Counter} heading="Counter Component" />
     `
