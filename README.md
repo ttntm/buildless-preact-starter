@@ -4,9 +4,7 @@ A starter intended to showcase how I'm using Preact for SPAs in buildless enviro
 
 ## Preface
 
-In the official docs, this is called the [No build tools route](https://preactjs.com/guide/v10/getting-started#no-build-tools-route).
-
-At it's core, this approach leverages [HTM](https://github.com/developit/htm):
+In the official docs, this approach is called the [No build tools route](https://preactjs.com/guide/v10/getting-started#no-build-tools-route); it leverages [HTM](https://github.com/developit/htm):
 
 > HTM is a JSX-like syntax that works in standard JavaScript. Instead of requiring a build step, it uses JavaScript's own Tagged Templates syntax, which was added in 2015 and is supported in all modern browsers. This is an increasingly popular way to write Preact apps, since there are fewer moving parts to understand than a traditional front-end build tooling setup.
 
