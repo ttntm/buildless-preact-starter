@@ -1,3 +1,5 @@
+![showcase](https://d33wubrfki0l68.cloudfront.net/2581642b51e126ac5abf089fab72cab3f53d3897/19ec1/img/blog/buildless-preact.png)
+
 # buildless-preact-starter
 
 A starter intended to showcase how I'm using Preact for SPAs in buildless environments.
